@@ -33,10 +33,9 @@ function isValid(s) {
   for (let i = 0; i < length/2; i++){
     for (let j = 0; j < length-1; j++){
       let fair = str[j]+str[j+1];
-      console.log(fair);
       if ( (fair === "()") || (fair === "{}") || (fair === "[]")){
-        str= str.replace(str[j+1], "");
         str= str.replace(str[j], "");
+	str= str.replace(str[j], "");
       }
     }  
   }
